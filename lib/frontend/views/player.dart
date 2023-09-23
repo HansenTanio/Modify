@@ -121,7 +121,6 @@ class _MusicPlayerState extends State<MusicPlayer> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 1, 67, 121),
         title: Text(
           'Musik',
           style: TextStyle(color: Colors.white),
@@ -165,8 +164,8 @@ class _MusicPlayerState extends State<MusicPlayer> {
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Slider(
               inactiveColor: Colors.grey,
-              activeColor: Color.fromARGB(255, 1, 67, 121),
-              thumbColor: Colors.black,
+              activeColor: Colors.white,
+              thumbColor: Colors.white,
               value: position.inSeconds.toDouble(),
               // value: _currentSliderValue,
               min: 0.0,
@@ -218,19 +217,19 @@ class _MusicPlayerState extends State<MusicPlayer> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconButton(
-                hoverColor: Color.fromARGB(255, 1, 67, 121),
+                hoverColor: Colors.grey,
                 icon: Icon(Icons.repeat),
                 onPressed: () {},
               ),
               IconButton(
-                hoverColor: Color.fromARGB(255, 1, 67, 121),
+                hoverColor: Colors.grey,
                 icon: Icon(Icons.skip_previous),
                 onPressed: () {
                   _resetSlider();
                 },
               ),
               IconButton(
-                hoverColor: Color.fromARGB(255, 1, 67, 121),
+                hoverColor: Colors.grey,
                 icon: Icon(_isPlaying ? Icons.pause : Icons.play_arrow),
                 onPressed: () async {
                   if (_isPlaying) {
@@ -252,12 +251,12 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 },
               ),
               IconButton(
-                hoverColor: Color.fromARGB(255, 1, 67, 121),
+                hoverColor: Colors.grey,
                 icon: Icon(Icons.skip_next),
                 onPressed: () {},
               ),
               IconButton(
-                  hoverColor: Color.fromARGB(255, 1, 67, 121),
+                  hoverColor: Colors.grey,
                   icon: !prov.favoriteList.contains(widget.item)
                       ? Icon(Icons.favorite_border)
                       : Icon(
