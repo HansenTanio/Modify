@@ -16,7 +16,6 @@ class _lagufavorit extends State<lagufavorit> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Favorite Songs'),
-        backgroundColor: Color.fromARGB(255, 1, 67, 121),
         centerTitle: true,
       ),
       body: Visibility(

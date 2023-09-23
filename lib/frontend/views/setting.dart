@@ -30,7 +30,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Settings'),
-        backgroundColor: Color.fromARGB(255, 1, 67, 121),
       ),
       body: ListView(
         children: [
@@ -47,31 +46,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
               trailing: Switch(
                 value: _notificationEnabled,
                 onChanged: _toggleNotification,
-              ),
-            ),
-          ),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: ListTile(
-              leading: Icon(Icons.light_mode),
-              title: Text(
-                'Dark Mode',
-                style: TextStyle(
-                  color: Theme.of(context).textTheme.bodyText2!.color,
-                ),
-              ),
-              trailing: Switch(
-                value: darkModeEnabled,
-                onChanged: (bool value) {
-                  MyApp.themeNotifier.value =
-                      MyApp.themeNotifier.value == ThemeMode.light
-                          ? ThemeMode.dark
-                          : ThemeMode.light;
-                  setState(() {
-                    darkModeEnabled = value;
-                  });
-                },
               ),
             ),
           ),

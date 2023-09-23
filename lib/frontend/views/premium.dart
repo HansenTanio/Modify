@@ -14,7 +14,6 @@ class _premium extends State<Premium> {
       appBar: AppBar(
         title: Text('Premium Subscription'),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 1, 67, 121),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -33,7 +32,7 @@ class _premium extends State<Premium> {
                   'Lyrics display',
                 ],
                 buttonText: 'SUBSCRIBE',
-                buttonColor: Color.fromARGB(255, 1, 67, 121),
+                buttonColor: Color.fromARGB(255, 30, 215, 96),
               ),
               SizedBox(height: 16.0),
               PremiumCard(
@@ -47,7 +46,7 @@ class _premium extends State<Premium> {
                   'Lyrics display',
                 ],
                 buttonText: 'SUBSCRIBE',
-                buttonColor: Color.fromARGB(255, 1, 67, 121),
+                buttonColor: Color.fromARGB(255, 30, 215, 96),
               ),
               SizedBox(height: 16.0),
               PremiumCard(
@@ -61,7 +60,7 @@ class _premium extends State<Premium> {
                   'Lyrics display',
                 ],
                 buttonText: 'SUBSCRIBE',
-                buttonColor: Color.fromARGB(255, 1, 67, 121),
+                buttonColor: Color.fromARGB(255, 30, 215, 96),
               ),
             ],
           ),

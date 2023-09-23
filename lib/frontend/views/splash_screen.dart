@@ -13,7 +13,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 0), () {
       Navigator.push(context, MaterialPageRoute(
         builder: (context) {
           return MyHomePage();
@@ -26,37 +26,40 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.blue,
-              Color.fromARGB(255, 1, 70, 150),
-            ], // Replace with your desired colors
-          ),
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color.fromARGB(255, 30, 215, 96),
+            Colors.black,
+          ], // Replace with your desired colors
         ),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SpinKitWave(
-              color: Color.fromARGB(255, 202, 224, 236),
-              size: 150,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          SpinKitWave(
+            color: Color.fromARGB(255, 202, 224, 236),
+            size: 150,
+          ),
+          SizedBox(
+            height: 100,
+          ),
+          Material(
+            color: Colors.transparent,
+            child: Text(
+              'Modify',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 45,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            SizedBox(
-              height: 100,
-            ),
-            Material(
-                color: Colors.transparent,
-                child: Text(
-                  'Music',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 36,
-                      fontWeight: FontWeight.bold),
-                ))
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }

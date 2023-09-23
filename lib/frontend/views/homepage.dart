@@ -169,7 +169,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('HomePage'),
-        backgroundColor: Color.fromARGB(255, 1, 67, 121),
         centerTitle: true,
       ),
       drawer: Drawer(
@@ -181,9 +180,6 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 height: 100,
                 child: DrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 1, 67, 121),
-                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -201,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Card(
                 child: ListTile(
                   leading: Icon(Icons.star),
-                  iconColor: Colors.yellow,
+                  iconColor: Colors.white,
                   title: Text('Premium'),
                   onTap: () {
                     Navigator.push(context,
@@ -214,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Card(
                 child: ListTile(
                   leading: Icon(Icons.favorite),
-                  iconColor: Colors.red,
+                  iconColor: Colors.white,
                   title: Text('Favorite'),
                   onTap: () {
                     Navigator.push(context,
@@ -227,7 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Card(
                 child: ListTile(
                   leading: Icon(Icons.settings),
-                  iconColor: Colors.black,
+                  iconColor: Colors.white,
                   title: Text('Settings'),
                   onTap: () {
                     Navigator.push(context,
@@ -241,7 +237,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ListTile(
                   leading: Icon(Icons.contact_support),
                   title: Text('AboutUs'),
-                  iconColor: Colors.blueGrey,
+                  iconColor: Colors.white,
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
@@ -253,7 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Card(
                 child: ListTile(
                   leading: Icon(Icons.logout),
-                  iconColor: Color.fromARGB(255, 1, 67, 121),
+                  iconColor: Colors.white,
                   title: Text('Logout'),
                   onTap: () {
                     _showLogoutConfirmationDialog();
@@ -288,13 +284,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 1, 67, 121),
-              ),
+              padding: EdgeInsets.all(10),
               child: Text(
                 'Recommended',
-                style: TextStyle(color: Colors.white, fontSize: 18),
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
               ),
               width: double.infinity,
             ),
@@ -340,13 +336,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 1, 67, 121),
-              ),
+              padding: EdgeInsets.all(10),
               child: Text(
                 'Top Chart',
-                style: TextStyle(color: Colors.white, fontSize: 18),
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
               ),
               width: double.infinity,
             ),

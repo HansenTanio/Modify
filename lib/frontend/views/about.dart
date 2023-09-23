@@ -12,8 +12,7 @@ class _about extends State<about> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('About Us'),
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 1, 67, 121),
+        centerTitle: true,        
       ),
       body: SingleChildScrollView(
         child: Container(

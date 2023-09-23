@@ -76,7 +76,6 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Login'),
-        backgroundColor: Color.fromARGB(255, 1, 67, 121),
         automaticallyImplyLeading: false,
       ),
       body: Container(

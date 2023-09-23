@@ -19,13 +19,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ValueListenableBuilder<ThemeMode>(
       valueListenable: themeNotifier,
-      builder: (_, ThemeMode currentMode, __) {
+      builder: (_, ThemeMode darkmode, __) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData.from(
             colorScheme: ColorScheme.fromSwatch().copyWith(
-              primary: Color.fromARGB(255, 1, 67, 121),
+              primary: Color.fromARGB(255, 30, 215, 96),
             ),
           ).copyWith(
             scaffoldBackgroundColor: Color.fromARGB(255, 202, 224, 236),
@@ -36,10 +36,7 @@ class MyApp extends StatelessWidget {
                 bodyText2: TextStyle(color: Colors.black)),
           ),
           darkTheme: ThemeData.dark(),
-          themeMode: currentMode,
-          home: const SplashScreen(
-            
-          ),
+          home: const SplashScreen(),
         );
       },
     );

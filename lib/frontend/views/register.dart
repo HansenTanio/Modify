@@ -130,7 +130,6 @@ class _RegisterState extends State<Register> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Sign Up'),
-        backgroundColor: Color.fromARGB(255, 1, 67, 121),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
